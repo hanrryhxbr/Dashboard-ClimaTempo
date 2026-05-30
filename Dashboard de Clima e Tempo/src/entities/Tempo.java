@@ -1,66 +1,54 @@
 package entities;
 
+import entities.enums.TipoDeTempo;
+
+import java.time.LocalDate;
+
 public class Tempo {
 
-    Double tempMaxima;
-    Double tempMinima;
-    Double tempMedia;
+    private final LocalDate data;
+    private final Temperatura temperatura;
+    private final VelocidadeVento velocidadeVento;
+    private final TipoDeTempo tipoDeTempo;
+    private final ProbabilidadeTempo probabilidadeTempo;
 
-    Double quantChuvaMaxima;
-    Double quantChuvaMinima;
-    Double probChuva;
-
-    Double velocidadeDoVentoMaxima;
-    Double velocidadeDoVentoMinima;
-    Double velocidadeDoVentoMedia;
-
-    public Tempo(Double tempMaxima, Double tempMinima, Double quantChuvaMaxima, Double quantChuvaMinima, Double probChuva, Double velocidadeDoVentoMaxima, Double velocidadeDoVentoMinima) {
-        this.tempMaxima = tempMaxima;
-        this.tempMinima = tempMinima;
-        this.tempMedia = (tempMaxima + tempMinima) / 2;
-        this.quantChuvaMaxima = quantChuvaMaxima;
-        this.quantChuvaMinima = quantChuvaMinima;
-        this.probChuva = probChuva;
-        this.velocidadeDoVentoMaxima = velocidadeDoVentoMaxima;
-        this.velocidadeDoVentoMinima = velocidadeDoVentoMinima;
-        this.velocidadeDoVentoMedia = (velocidadeDoVentoMaxima + velocidadeDoVentoMinima) / 2;
+    public Tempo(LocalDate data, Temperatura temperatura, VelocidadeVento velocidadeVento, TipoDeTempo tipoDeTempo, ProbabilidadeTempo probabilidadeTempo) {
+        this.data = data;
+        this.temperatura = temperatura;
+        this.velocidadeVento = velocidadeVento;
+        this.tipoDeTempo = tipoDeTempo;
+        this.probabilidadeTempo = probabilidadeTempo;
     }
 
-    public Double getVelocidadedoVentoMaxima() {
-        return velocidadeDoVentoMaxima;
+    public LocalDate getData() {
+        return data;
     }
 
-    public Double getVelocidadedoVentoMinima() {
-        return velocidadeDoVentoMinima;
+    public int getDiaDaSemana() {
+        return switch (data.getDayOfWeek()) {
+            case SUNDAY -> 0;
+            case MONDAY -> 1;
+            case THURSDAY -> 2;
+            case WEDNESDAY -> 3;
+            case TUESDAY -> 4;
+            case FRIDAY -> 5;
+            case SATURDAY -> 6;
+        };
     }
 
-    public Double getVelocidadedoVentoMedia() {
-        return velocidadeDoVentoMedia;
+    public Temperatura getTemperatura() {
+        return temperatura;
     }
 
-    public Double getQuantChuvaMaxima() {
-        return quantChuvaMaxima;
+    public VelocidadeVento getVelocidadeVento() {
+        return velocidadeVento;
     }
 
-    public Double getQuantChuvaMinima() {
-        return quantChuvaMinima;
+    public TipoDeTempo getTipoDeTempo() {
+        return tipoDeTempo;
     }
 
-    public Double getProbChuva() {
-        return probChuva;
+    public ProbabilidadeTempo getProbabilidadeTempo() {
+        return probabilidadeTempo;
     }
-
-    public Double getTempMaxima() {
-        return tempMaxima;
-    }
-
-    public Double getTempMinima() {
-        return tempMinima;
-    }
-
-    public Double getTempMedia() {
-        return tempMedia;
-    }
-
-
 }

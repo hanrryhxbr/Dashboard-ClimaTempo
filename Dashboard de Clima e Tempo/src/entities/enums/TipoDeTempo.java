@@ -1,7 +1,6 @@
 package entities.enums;
 
-public enum CondicaoTemporal {
-
+public enum TipoDeTempo {
     ENSOLARADO,
     PARCIALMENTE_NUBLADO,
     NUBLADO,
