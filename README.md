@@ -5,3 +5,7 @@ Este projeto é um dashboard de clima e tempo. Ele conta com uma interface visua
 
 ## 🛠 Tecnologias
 Java, JavaFX
+
+## Equipe
+
+Romeryto Hanrry & Alan Marcelo
