@@ -10,14 +10,14 @@ public class Tempo {
     private final Temperatura temperatura;
     private final VelocidadeVento velocidadeVento;
     private final TipoDeTempo tipoDeTempo;
-    private final ProbabilidadeTempo probabilidadeTempo;
+    private final PrevisaoDoDia previsaoDoDia;
 
-    public Tempo(LocalDate data, Temperatura temperatura, VelocidadeVento velocidadeVento, TipoDeTempo tipoDeTempo, ProbabilidadeTempo probabilidadeTempo) {
+    public Tempo(LocalDate data, Temperatura temperatura, VelocidadeVento velocidadeVento, TipoDeTempo tipoDeTempo, PrevisaoDoDia previsaoDoDia) {
         this.data = data;
         this.temperatura = temperatura;
         this.velocidadeVento = velocidadeVento;
         this.tipoDeTempo = tipoDeTempo;
-        this.probabilidadeTempo = probabilidadeTempo;
+        this.previsaoDoDia = previsaoDoDia;
     }
 
     public LocalDate getData() {
@@ -48,7 +48,7 @@ public class Tempo {
         return tipoDeTempo;
     }
 
-    public ProbabilidadeTempo getProbabilidadeTempo() {
-        return probabilidadeTempo;
+    public PrevisaoDoDia getProbabilidadeTempo() {
+        return previsaoDoDia;
     }
 }

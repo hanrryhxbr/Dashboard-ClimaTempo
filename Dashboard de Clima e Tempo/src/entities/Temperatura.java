@@ -2,25 +2,25 @@ package entities;
 
 public class Temperatura {
 
-    Double tempMaxima;
-    Double tempMinima;
-    Double tempMedia;
+    Integer tempMaxima;
+    Integer tempMinima;
+    Integer tempMedia;
 
-    public Temperatura(double tempMaxima, double tempMinima) {
+    public Temperatura(Integer tempMaxima, Integer tempMinima) {
         this.tempMaxima = tempMaxima;
         this.tempMinima = tempMinima;
         this.tempMedia = (tempMaxima + tempMinima) / 2;
     }
 
-    public Double getTempMaxima() {
+    public Integer getTempMaxima() {
         return tempMaxima;
     }
 
-    public Double getTempMinima() {
+    public Integer getTempMinima() {
         return tempMinima;
     }
 
-    public Double getTempMedia() {
+    public Integer getTempMedia() {
         return tempMedia;
     }
 }

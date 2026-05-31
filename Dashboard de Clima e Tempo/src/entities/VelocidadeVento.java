@@ -2,25 +2,25 @@ package entities;
 
 public class VelocidadeVento {
 
-    Double velMaxima;
-    Double velMinima;
-    Double velMedia;
+    Integer velMaxima;
+    Integer velMinima;
+    Integer velMedia;
 
-    public VelocidadeVento(double velMaxima, double velMinima) {
+    public VelocidadeVento(Integer velMaxima, Integer velMinima) {
         this.velMaxima = velMaxima;
         this.velMinima = velMinima;
         this.velMedia = (velMaxima + velMinima) / 2;
     }
 
-    public Double getVelMaxima() {
+    public Integer getVelMaxima() {
         return velMaxima;
     }
 
-    public Double getVelMinima() {
+    public Integer getVelMinima() {
         return velMinima;
     }
 
-    public Double getVelMedia() {
+    public Integer getVelMedia() {
         return velMedia;
     }
 }

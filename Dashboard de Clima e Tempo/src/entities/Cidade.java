@@ -12,12 +12,9 @@ public abstract class Cidade implements Previsao {
     public Tempo[] previsao() {
         Tempo[] previsaoSemana = new Tempo[7];
 
-        for (int i = 0; i < previsao().length; i++) {
-            if (i == tempoAtual.getDiaDaSemana()) {
-                previsaoSemana[i] = tempoAtual;
-            } else {
-
-            }
+        previsaoSemana[0] = tempoAtual;
+        for (int i = 1; i < previsao().length; i++) {
+            previsaoSemana[i] = RandomTempoFactory.createProximoTempo(clima, previsaoSemana[i-1]);
         }
 
         return previsaoSemana;
